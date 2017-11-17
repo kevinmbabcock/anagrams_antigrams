@@ -4,14 +4,14 @@ class Words
     @word2 = word2.downcase!()
     @word1_letters = word1.split(//)
     @word2_letters = word2.split(//)
+    @all_letters = [@word1_letters, @word2_letters]
   end
 
   def is_anagram? ()
-    @word1_letters.delete_if do |letter|
-      letter == " " || letter == "," || letter == "." || letter == "-" || letter == "_"
-    end
-    @word2_letters.delete_if do |letter|
-      letter == " " || letter == "," || letter == "." || letter == "-" || letter == "_"
+    @all_letters.each do |letter|
+      letter.delete_if do |remove_letter|
+        remove_letter == " " || remove_letter == "," || remove_letter == "." || remove_letter == "-" || remove_letter == "_"
+      end
     end
     not_letters = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
     not_letters.each do |letter|
