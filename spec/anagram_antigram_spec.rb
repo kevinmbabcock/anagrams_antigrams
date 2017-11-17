@@ -33,4 +33,9 @@ describe('anagram_antigram') do
     new_word = Words.new("racecar", "racecar")
     expect(new_word.is_palindrome?).to(eq(true))
   end
+
+  it("return false if either word is not a real word") do
+    new_word = Words.new("Kevin", "St3v3")
+    expect(new_word.is_anagram?).to(eq("You need to input actual words!"))
+  end
 end

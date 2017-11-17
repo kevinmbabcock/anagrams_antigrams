@@ -7,6 +7,12 @@ class Words
   end
 
   def is_anagram? ()
+    not_letters = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+    not_letters.each do |letter|
+      if (@word1_letters.include?(letter) || @word2_letters.include?(letter))
+        return "You need to input actual words!"
+      end
+    end
     if (@word1_letters.length == @word2_letters.length)
       @word1_letters.each do |letter|
         if (@word2_letters.include?(letter))
