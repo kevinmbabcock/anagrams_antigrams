@@ -30,7 +30,7 @@ describe('anagram_antigram') do
   end
 
   it("return true if word is both anagram and palindrome") do
-    new_word = Words.new("kayak", "kayak")
+    new_word = Words.new("racecar", "racecar")
     expect(new_word.is_palindrome?).to(eq(true))
   end
 end
