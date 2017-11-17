@@ -1,7 +1,7 @@
 class Words
   def initialize(word1, word2)
-    @word1 = word1
-    @word2 = word2
+    @word1 = word1.downcase!()
+    @word2 = word2.downcase!()
     @word1_letters = word1.split(//)
     @word2_letters = word2.split(//)
   end

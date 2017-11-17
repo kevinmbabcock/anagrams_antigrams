@@ -14,4 +14,9 @@ describe('anagram_antigram') do
     expect(new_word.is_anagram?).to(eq(true))
   end
 
+  it("return true if same letters but not same capitalization") do
+    new_word = Words.new("DOg", "GoD")
+    expect(new_word.is_anagram?).to(eq(true))
+  end
+
 end
