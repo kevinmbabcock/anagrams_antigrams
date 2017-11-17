@@ -9,4 +9,9 @@ describe('anagram_antigram') do
     expect(new_word.is_anagram?).to(eq(false))
   end
 
+  it("return true for words that contain all the same letters") do
+    new_word = Words.new("dog", "god")
+    expect(new_word.is_anagram?).to(eq(true))
+  end
+
 end
