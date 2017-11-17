@@ -47,5 +47,13 @@ class Words
     end
   end
 
+  def is_antigram? ()
+    if (self.is_anagram? == false)
+      return true
+    else
+      return "This word can't be an antigram since it is an anagram"
+    end
+  end
+
 
 end
