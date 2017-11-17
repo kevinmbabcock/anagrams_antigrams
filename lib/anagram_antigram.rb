@@ -23,9 +23,23 @@ class Words
 
   def is_palindrome? ()
     if (self.is_anagram? == true)
-      #do something
+      word1_reverse = []
+      @word1_letters.each do |letter|
+        word1_reverse.unshift(letter)
+      end
+      word2_reverse = []
+      @word2_letters.each do |letter|
+        word2_reverse.unshift(letter)
+      end
+      if (word1_reverse == @word1_letters && word2_reverse == @word2_letters)
+        return true
+      else
+        return false
+      end
     else
       return false
     end
   end
+
+
 end

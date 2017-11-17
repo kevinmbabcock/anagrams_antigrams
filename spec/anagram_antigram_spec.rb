@@ -24,4 +24,13 @@ describe('anagram_antigram') do
     expect(new_word.is_palindrome?).to(eq(false))
   end
 
+  it("return false if word is anagram but not palindrome") do
+    new_word = Words.new("dog", "god")
+    expect(new_word.is_palindrome?).to(eq(false))
+  end
+
+  it("return true if word is both anagram and palindrome") do
+    new_word = Words.new("kayak", "kayak")
+    expect(new_word.is_palindrome?).to(eq(true))
+  end
 end
