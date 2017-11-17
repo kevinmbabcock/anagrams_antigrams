@@ -20,4 +20,12 @@ class Words
       return false
     end
   end
+
+  def is_palindrome? ()
+    if (self.is_anagram? == true)
+      #do something
+    else
+      return false
+    end
+  end
 end

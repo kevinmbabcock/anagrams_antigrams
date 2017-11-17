@@ -19,4 +19,9 @@ describe('anagram_antigram') do
     expect(new_word.is_anagram?).to(eq(true))
   end
 
+  it("return not a palindrome if word is not an anagram") do
+    new_word = Words.new("dog", "puppy")
+    expect(new_word.is_palindrome?).to(eq(false))
+  end
+
 end
