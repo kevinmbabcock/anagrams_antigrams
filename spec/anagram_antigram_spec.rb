@@ -43,4 +43,9 @@ describe('anagram_antigram') do
     new_word = Words.new("dog", "god")
     expect(new_word.is_antigram?).to(eq("This word can't be an antigram since it is an anagram"))
   end
+
+  it("return true if words are antigrams") do
+    new_word = Words.new("dog", "cat")
+    expect(new_word.is_antigram?).to(eq(true))
+  end
 end

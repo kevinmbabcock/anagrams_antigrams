@@ -49,6 +49,11 @@ class Words
 
   def is_antigram? ()
     if (self.is_anagram? == false)
+      @word1_letters.each do |letter|
+        if (@word2_letters.include?(letter))
+          return false
+        end
+      end
       return true
     else
       return "This word can't be an antigram since it is an anagram"
