@@ -7,6 +7,12 @@ class Words
   end
 
   def is_anagram? ()
+    @word1_letters.delete_if do |letter|
+      letter == " " || letter == "," || letter == "." || letter == "-" || letter == "_"
+    end
+    @word2_letters.delete_if do |letter|
+      letter == " " || letter == "," || letter == "." || letter == "-" || letter == "_"
+    end
     not_letters = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
     not_letters.each do |letter|
       if (@word1_letters.include?(letter) || @word2_letters.include?(letter))

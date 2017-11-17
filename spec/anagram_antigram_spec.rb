@@ -48,4 +48,9 @@ describe('anagram_antigram') do
     new_word = Words.new("dog", "cat")
     expect(new_word.is_antigram?).to(eq(true))
   end
+
+  it("return true if words contain the same letters") do
+    new_word = Words.new("Kevin.,..--__  Sam", "samKevin")
+    expect(new_word.is_anagram?).to(eq(true))
+  end
 end
